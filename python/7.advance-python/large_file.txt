@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Hind:300&display=swap");
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: white;
+        }
+
+        .shape__container {
+            position: relative;
+            height: 550px;
+            width: 400px;
+        }
+
+        .shape {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: #4787c9;
+            width: 400px;
+            height: 550px;
+            border-radius: 30px;
+            transform: skewX(-5deg) skewY(-5deg);
+            /Shorthand: skew(-5deg, -5deg);/
+            box-shadow: 0px 5px 14px rgba(9, 33, 58, 0.1);
+        }
+
+        .customer__picture {
+            height: 50%;
+        }
+
+        .customer__picture img {
+            height: 100%;
+            transform: skewX(5deg) skewY(5deg) scale(1.15);
+            /Shorthand: skew(5deg, 5deg) scale(1.15);/
+        }
+
+        .text {
+            font-family: "Hind", sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            color: #f4f4f4;
+            padding: 40px 30px;
+            transform: skewX(5deg) skewY(5deg);
+            /Shorthand: skew(5deg, 5deg);/
+        }
+
+        .text .logo {
+            margin-bottom: 10px;
+            max-height: 25px;
+        }
+
+        .shape__shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #f0f7ff;
+            width: 400px;
+            height: 550px;
+            border-radius: 30px;
+            transform: skewX(-5deg) skewY(-5deg) rotate(-20deg);
+            /Shorthand: skew(-5deg, -5deg) rotate(-20deg);/
+            z-index: -10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shape__container">
+        <div class="shape">
+            <div class="customer__picture">
+                <img
+                    src="https://images.unsplash.com/photo-1562184760-a11b3cf7c169?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" />
+            </div>
+            <div class="text">
+                <img class="logo" src="./images/Spectur.svg" alt="" />
+                <p>
+                    We were struggling to get our new application off the ground, but
+                    AppPad was so helpful to set everything up, great support team, and
+                    overall an awesome experience from start to finish.
+                </p>
+            </div>
+        </div>
+        <div class="shape__shadow"></div>
+    </div>
+</body>
+
+</html>
